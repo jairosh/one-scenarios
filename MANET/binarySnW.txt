@@ -1,0 +1,19 @@
+## Scenario settings
+Scenario.name = cdmx-bSnW-seed[%%MovementModel.rngSeed%%]-MANET-[%%Group.nrofHosts%%]n
+
+Group.movementModel = RandomWaypoint
+Group.router = SprayAndWaitRouter
+
+##Routing parameters
+SprayAndWaitRouter.binaryMode=true
+SprayAndWaitRouter.nrofCopies = 8
+
+# [1.8, 10] Km/h
+Group.speed = 0.5, 2.7
+
+Group.nrofHosts = 500
+
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 15000,15000
+
+Report.reportDir = ~/Simulaciones/MANET/Binary-SprayNWait/

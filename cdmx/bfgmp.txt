@@ -1,0 +1,34 @@
+## Scenario settings
+Scenario.name = cdmx-bfgmp-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%]n
+
+# Common settings for all groups
+Group.movementModel = ShortestPathMapBasedMovement
+Group.router = BFGMPRouter
+
+# 10-50 km/h
+Group.speed = 2.7, 13.9
+# Move only over streets
+Group.okMaps = 1
+
+Group.nrofHosts = 400
+
+##Routing parameters
+BFGMPRouter.degradationInterval = 300
+BFGMPRouter.zoneThreshold = 0.5
+BFGMPRouter.BFCounters = 512
+BFGMPRouter.BFHashFunctions = 8
+BFGMPRouter.BFMaxCount = 32
+
+BFGMPRouter.expWeight = 4
+
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 35000,25000
+
+## Map based movement -movemetn model sepcific settings
+MapBasedMovement.nrofMapFiles = 1
+MapBasedMovement.mapFile1 = /home/jairo/Repos/one-scenarios/cdmx/main.wkt
+
+Report.reportDir = /home/jairo/Simulaciones/cdmx/BFGMP/
+
+
+

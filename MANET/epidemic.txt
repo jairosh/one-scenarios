@@ -1,0 +1,14 @@
+## Scenario settings
+Scenario.name = MANET-epidemic-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%]n
+
+Group.movementModel = RandomWaypoint
+Group.router = EpidemicRouter
+# [1.8, 10]Km/h
+Group.speed = 0.5, 2.7
+
+Group.nrofHosts = 500
+
+
+# World's size for Movement Models without implicit size (width, height; meters)
+Report.reportDir = ~/Simulaciones/MANET/Epidemic/
+

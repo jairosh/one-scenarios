@@ -1,0 +1,27 @@
+
+## Scenario settings
+Scenario.name = cdmx-bSnW-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%]n
+
+# Common settings for all groups
+Group.movementModel = ShortestPathMapBasedMovement
+Group.router = SprayAndWaitRouter
+
+Group.speed = 2.7, 13.9
+Group.okMaps = 1
+
+Group.nrofHosts = 500
+
+##Routing parameters
+SprayAndWaitRouter.binaryMode=true
+SprayAndWaitRouter.nrofCopies = 6
+SprayAndWaitRouter.binaryMode = true
+
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 35000,25000
+
+## Map based movement model sepcific settings
+MapBasedMovement.nrofMapFiles = 1
+MapBasedMovement.mapFile1 = /home/jairo/Repos/one-scenarios/cdmx/main.wkt
+
+Report.reportDir = /home/jairo/Simulaciones/cdmx/Binary-SprayNWait/
+

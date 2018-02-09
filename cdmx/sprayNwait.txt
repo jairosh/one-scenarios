@@ -1,0 +1,24 @@
+
+## Scenario settings
+Scenario.name = cdmx-snw-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%]n
+
+Group.movementModel = ShortestPathMapBasedMovement
+Group.router = SprayAndWaitRouter
+# 10-50 km/h
+Group.speed = 2.7, 13.9
+Group.okMaps = 1
+
+Group.nrofHosts = 500
+
+# Routing parameters
+SprayAndWaitRouter.nrofCopies = 4
+SprayAndWaitRouter.binaryMode = false
+
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 35000,25000
+
+# Map based movement -movemetn model sepcific settings
+MapBasedMovement.nrofMapFiles = 1
+MapBasedMovement.mapFile1 = /home/jairo/Repos/one-scenarios/cdmx/main.wkt
+
+Report.reportDir = /home/jairo/Simulaciones/cdmx/SprayNWait/

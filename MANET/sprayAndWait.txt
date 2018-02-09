@@ -1,0 +1,17 @@
+## Scenario settings
+Scenario.name = MANET-snw-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%]n
+
+Group.movementModel = RandomWaypoint
+Group.router = SprayAndWaitRouter
+
+SprayAndWaitRouter.binaryMode=false
+SprayAndWaitRouter.nrofCopies = 8
+# [1.8, 10] Km/h
+Group.speed = 0.5, 2.7
+
+Group.nrofHosts = 500
+
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 15000,15000
+
+Report.reportDir = ~/Simulaciones/MANET/SprayNWait/
