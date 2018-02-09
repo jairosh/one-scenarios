@@ -24,4 +24,4 @@ BFGRouter.initialCopies = 8
 # World's size for Movement Models without implicit size (width, height; meters)
 MovementModel.worldSize = 15000,15000
 
-Report.reportDir = ~/Simulaciones/MANET/BFG
+Report.reportDir = /home/jairo/Simulaciones/MANET/BFG

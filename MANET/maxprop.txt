@@ -14,4 +14,4 @@ Group.nrofHosts = 500
 # World's size for Movement Models without implicit size (width, height; meters)
 MovementModel.worldSize = 15000,15000
 
-Report.reportDir = ~/Simulaciones/MANET/MaxPROP/
+Report.reportDir = /home/jairo/Simulaciones/MANET/MaxPROP/

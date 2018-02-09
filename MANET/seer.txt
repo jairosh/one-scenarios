@@ -11,4 +11,4 @@ Group.nrofHosts = 200
 # World's size for Movement Models without implicit size (width, height; meters)
 MovementModel.worldSize = 15000,15000
 
-Report.reportDir = ~/Simulaciones/MANET/SeeR/
+Report.reportDir = /home/jairo/Simulaciones/MANET/SeeR/

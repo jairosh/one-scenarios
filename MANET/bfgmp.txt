@@ -23,4 +23,4 @@ BFGMPRouter.weightDelta = 0.4
 # World's size for Movement Models without implicit size (width, height; meters)
 MovementModel.worldSize = 15000,15000
 
-Report.reportDir = ~/Simulaciones/MANET/BFGMP
+Report.reportDir = /home/jairo/Simulaciones/MANET/BFGMP

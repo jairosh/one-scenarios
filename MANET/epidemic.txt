@@ -10,5 +10,5 @@ Group.nrofHosts = 500
 
 
 # World's size for Movement Models without implicit size (width, height; meters)
-Report.reportDir = ~/Simulaciones/MANET/Epidemic/
+Report.reportDir = /home/jairo/Simulaciones/MANET/Epidemic/
 
