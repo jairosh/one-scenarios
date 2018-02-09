@@ -3,13 +3,14 @@ Scenario.name = MANET-bfgmp-seed[%%MovementModel.rngSeed%%]-[%%Group.nrofHosts%%
 
 Group.movementModel = RandomWaypoint
 Group.router = BFGMPRouter
-# [1.8, 10]Km/h
-Group.speed = 0.5, 2.7
+# [1.8, 3.6]Km/h
+Group.speed = 0.5, 1.0
 
 Group.nrofHosts = 500
 
+Events1.hosts = 0,499
+
 # Routing parameters
-Group.deleteDelivered = true
 BFGMPRouter.degradationInterval = 300
 BFGMPRouter.zoneThreshold = 0.5
 BFGMPRouter.BFCounters = 512
