@@ -1,22 +1,24 @@
-Scenario.name=infocom06-%%Group.router%%
+Scenario.name=infocom06_%%Group.router%%_[%%Group.msgTtl%%]ttl_[%%Scenario.endTime%%]s_seed[%%Events2.prefix%%]
 # Do not simulate the connections as we'll load the connections file
 Scenario.simulateConnections = false
 Scenario.updateInterval = 5.0
 
-Scenario.endTime = [43200; 64800; 86400]
+# Infocom06 runs for about 93.72 hours (337418 seconds)
+# Simulate for [24, 36, 48, ..., 93.72] hours
+Scenario.endTime = [86400; 129600; 172800; 216000; 259200; 302400; 337420;]
 Scenario.nrofHostGroups = 2
 Scenario.nrofHosts = 98
 
 # The dataset considers two types of interface in nodes: long and short range
 interface1.type = SimpleBroadcastInterface
 # Tx speed:
-interface1.speed = 125k
+interface1.transmitSpeed = 125k
 # 10 meters transmit range
-interface1.transmitRange = 10
+interface1.transmitRange = 30
 
 interface2.type = SimpleBroadcastInterface
-interface2.speed = 125k
-interface2.transmitRange = 20
+interface2.transmitSpeed = 125k
+interface2.transmitRange = 50
 
 # Doesn't matter the mobility of the node since we are using the traces
 Group.movementModel = StationaryMovement
@@ -24,9 +26,22 @@ Group.nodeLocation = 50, 50
 Group.bufferSize = 200M
 Group.nrofInterfaces = 1
 Group.speed = 0.5, 3
-Group.msgTtl = 3000
+# Given in minutes
+Group.msgTtl = 300
 Group.groupID = n
+
 Group.router = SeerRouter
+Group.deleteDelivered = true
+BFGMPRouter.degradationInterval = 300
+BFGMPRouter.zoneThreshold = 0.5
+BFGMPRouter.BFCounters = 512
+BFGMPRouter.BFHashFunctions = 8
+BFGMPRouter.BFMaxCount = 32
+BFGMPRouter.expWeight = 4
+SprayAndWaitRouter.binaryMode = true
+SprayAndWaitRouter.nrofCopies = 8
+MaxPropRouter.probSetMaxSize = 50
+ProphetRouter.secondsInTimeUnit = 30
 
 
 Group1.nrofHosts = 78
@@ -48,16 +63,16 @@ Events1.filePath = /home/jairo/Mobility/haggle-one-infocom2006-complete/haggle-o
 
 ## Message creation events
 Events2.class = MessageEventGenerator
-Events2.hosts = 0,78
-Events2.prefix = M
+Events2.hosts = 0,98
+# This acts as the seed for message generation
+Events2.prefix = [M; MS; Ms; MSG; MSg; Msg; MSg; m; mS; ms; mSG; mSg; msg; mSg; Me; MeS; Mes; MeSG; MeSg; Meg; MeSg; me; meS; mes; meSG; meSg; mesg; meSg; ME; MES; MEs; MESG; MESg; MEg; MEg; mE; mE; mE; mESG; mESg; mEsg; mESg; mssg; mssG; msSg; msSG;  Mssg; MssG; MsSg; MsSG]
 Events2.interval = 30,60
-Events2.size = 50k,1M
-Events2.time = 0,18000
+Events2.size = 50k,500k
 
 
 ##----------------REPORTS
 Report.nrofReports = 1
-Report.reportDir = Simulaciones/CRAWDAD/infocom06
+Report.reportDir = /home/jairo/Simulaciones/CRAWDAD/infocom06
 Report.report1 = MessageStatsReport
 #Report.report2 = CreatedMessagesReport
 
