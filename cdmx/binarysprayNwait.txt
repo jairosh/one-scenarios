@@ -12,7 +12,6 @@ Group.okMaps = 1
 Group.nrofHosts = 500
 
 ##Routing parameters
-SprayAndWaitRouter.binaryMode=true
 SprayAndWaitRouter.nrofCopies = 6
 SprayAndWaitRouter.binaryMode = true
 
